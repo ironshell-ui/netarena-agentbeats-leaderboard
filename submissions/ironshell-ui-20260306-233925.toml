@@ -1,0 +1,20 @@
+# run: HARD DEBUG Monte Carlo v4.0 — 2026-03-06T19:00
+[green_agent]
+agentbeats_id = "019ba416-0462-7cf2-86f0-bf85123df8a4"
+env = { LOG_LEVEL = "INFO" }
+
+[[participants]]
+image = "ghcr.io/ironshell-ui/claudecowork-agent:master"
+name = "malt_operator"
+env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}", KIMI_API_KEY = "${KIMI_API_KEY}", MINIMAX_API_KEY = "${MINIMAX_API_KEY}", SERPAPI_KEY = "${SERPAPI_KEY}", OPENAI_API_KEY = "${OPENAI_API_KEY}", OPENROUTER_API_KEY = "${OPENROUTER_API_KEY}", FEATHERLESS_API_KEY = "${FEATHERLESS_API_KEY}" }
+
+[config]
+prompt_type = "fewshot_cot"
+complexity_level = ["level1", "level2", "level3"]
+num_queries = 1
+
+# DO NOT MODIFY BELOW THIS LINE.
+output_dir = "dump"
+output_file = "query_output.jsonl"
+benchmark_path = "assessment_queries.jsonl"
+regenerate_query = true
