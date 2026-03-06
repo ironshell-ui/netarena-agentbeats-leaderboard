@@ -3,6 +3,7 @@ name: Run MALT Evaluation
 on:
   workflow_dispatch:
   push:
+    branches: ['**']
     paths:
       - 'malt_scenario.toml'
 

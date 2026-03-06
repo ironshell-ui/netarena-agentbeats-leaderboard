@@ -3,6 +3,7 @@ name: Run K8s Evaluation
 on:
   workflow_dispatch:
   push:
+    branches: ['**']
     paths:
       - 'k8s_scenario.toml'
 

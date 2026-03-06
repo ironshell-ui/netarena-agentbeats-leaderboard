@@ -3,6 +3,7 @@ name: Run Route Evaluation
 on:
   workflow_dispatch:
   push:
+    branches: ['**']
     paths:
       - 'route_scenario.toml'
 
