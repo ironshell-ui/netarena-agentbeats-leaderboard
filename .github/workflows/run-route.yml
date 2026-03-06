@@ -1,13 +1,14 @@
 name: Run Route Evaluation
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'route_scenario.toml'
 
 jobs:
   run-route:
-    if: github.event.repository.fork == true || github.ref != 'refs/heads/main'
+    if: github.event.repository.fork == true || github.ref \!= 'refs/heads/main'
     permissions:
       contents: write
       packages: read

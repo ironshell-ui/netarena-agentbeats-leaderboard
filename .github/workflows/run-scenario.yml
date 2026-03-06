@@ -1,6 +1,18 @@
 name: Run Scenario
 
 on:
+  workflow_dispatch:
+    inputs:
+      scenario-file:
+        description: 'Path to the scenario TOML file'
+        required: false
+        default: 'malt_scenario.toml'
+        type: string
+      benchmark-app:
+        description: 'Type of application: malt, route, k8s'
+        required: true
+        default: 'malt'
+        type: string
   workflow_call:
     inputs:
       scenario-file:
