@@ -3,7 +3,7 @@ agentbeats_id = "019ba416-0462-7cf2-86f0-bf85123df8a4"
 env = { LOG_LEVEL = "INFO" }
 
 [[participants]]
-image = "ghcr.io/ironshell-ui/claudecowork-agent:latest"
+image = "ghcr.io/ironshell-ui/claudecowork-agent:master"
 name = "malt_operator"
 env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}", KIMI_API_KEY = "${KIMI_API_KEY}", MINIMAX_API_KEY = "${MINIMAX_API_KEY}", SERPAPI_KEY = "${SERPAPI_KEY}", OPENAI_API_KEY = "${OPENAI_API_KEY}" }
 
