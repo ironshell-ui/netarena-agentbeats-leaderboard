@@ -1,0 +1,20 @@
+# run: HARD DEBUG Monte Carlo v4.0 — 2026-03-06T19:00
+[green_agent]
+agentbeats_id = "019ba4cb-2f71-7583-a69b-07e1c4329428"
+env = { LOG_LEVEL = "INFO" }
+
+[[participants]]
+image = "ghcr.io/ironshell-ui/claudecowork-agent:master"
+name = "k8s_operator"
+env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}", KIMI_API_KEY = "${KIMI_API_KEY}", MINIMAX_API_KEY = "${MINIMAX_API_KEY}", SERPAPI_KEY = "${SERPAPI_KEY}", OPENAI_API_KEY = "${OPENAI_API_KEY}", OPENROUTER_API_KEY = "${OPENROUTER_API_KEY}", FEATHERLESS_API_KEY = "${FEATHERLESS_API_KEY}" }
+
+[config]
+prompt_type = "fewshot_cot"
+num_queries = 1
+max_iterations = 10
+
+# DO NOT MODIFY BELOW THIS LINE.
+benchmark_path = "assessment_error_config.json"
+output_dir = "dump"
+microservice_dir = "/microservices-demo"
+regenerate_config = true
