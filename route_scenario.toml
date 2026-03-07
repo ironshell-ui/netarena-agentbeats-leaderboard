@@ -3,16 +3,14 @@ agentbeats_id = "019ba8d8-c1d1-7923-b6c7-c5020e1c6cbe"
 env = { LOG_LEVEL = "INFO" }
 
 [[participants]]
-agentbeats_id = ""
+agentbeats_id = "ironshell-ui/ironshell"
+image = "ghcr.io/ironshell-ui/claudecowork-agent:master"
 name = "route_operator"
-env = { SECRET = "${GITHUB_SECRET_NAME}" }
+env = { DEEPSEEK_API_KEY = "${DEEPSEEK_API_KEY}", KIMI_API_KEY = "${KIMI_API_KEY}", MINIMAX_API_KEY = "${MINIMAX_API_KEY}", SERPAPI_KEY = "${SERPAPI_KEY}", OPENAI_API_KEY = "${OPENAI_API_KEY}", GOOGLE_API_KEY = "${GOOGLE_API_KEY}", OPENROUTER_API_KEY = "${OPENROUTER_API_KEY}", FEATHERLESS_API_KEY = "${FEATHERLESS_API_KEY}" }
 
 [config]
-# Prompt strategy for the agent. Options: "zeroshot_base", "zeroshot_cot", "fewshot_base", "fewshot_cot"
-prompt_type = "zeroshot_base"
-# Number of queries to generate for each error type (15 error types total).
+prompt_type = "fewshot_cot"
 num_queries = 1
-# Maximum number of iterations the agent can take to resolve a given routing issue.
 max_iterations = 10
 
 # DO NOT MODIFY BELOW THIS LINE.
